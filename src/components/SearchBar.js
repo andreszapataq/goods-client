@@ -1,6 +1,13 @@
-const SearchBar = () => {
+const SearchBar = ({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange }) => {
   return (
-    <div>SearchBar</div>
+    <form>
+        <input type="text" value={filterText} placeholder="Buscar..." onChange={(e) => onFilterTextChange(e.target.value)} />
+        <label>
+            <input type="checkbox" checked={inStockOnly} onChange={(e) => onInStockOnlyChange(e.target.checked)} />
+            {' '}
+            Mostrar solo los items con stock
+        </label>
+    </form>
   )
 }
 
