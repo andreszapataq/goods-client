@@ -7,7 +7,7 @@ const ItemRow = ({ item }) => {
   return (
     <tr>
         <td>{name}</td>
-        <td>{item.quantity}</td>
+        <td className="td-quantity">{item.quantity}</td>
     </tr>
   )
 }
