@@ -4,60 +4,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   padding: 30px;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 22px;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-h4 {
-  margin-top: 0;
-  font-size: 16px;
-}
-
-h5 {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-h6 {
-  margin-top: 0;
-  font-size: 12px;
-}
-
-ul {
-  padding-left: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 label {
   display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 7px;
+  margin-bottom: 17px;
 }
 
 th {
-  padding-top: 10px;
+  padding: 5px;
 }
 
 td {
-  padding: 2px;
-  padding-right: 40px;
+  padding: 3px;
 }
 
 input[type=text] {
@@ -77,4 +42,17 @@ input[type=checkbox] {
 
 .searchbar {
   width: 100%;
+}
+
+.th-descripcion, .th-cantidad {
+  background-color: #191923;
+  color: #FFF;
+}
+
+.th-categoria {
+  background-color: #F1F1F1;
+}
+
+.td-cantidad {
+  text-align: center;
 }

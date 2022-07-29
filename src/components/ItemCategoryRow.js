@@ -1,7 +1,7 @@
 const ItemCategoryRow = ({ category }) => {
   return (
     <tr>
-        <th colSpan='2'>
+        <th className="th-categoria" colSpan='2'>
             {category}
         </th>
     </tr>

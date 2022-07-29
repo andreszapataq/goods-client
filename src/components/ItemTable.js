@@ -35,8 +35,8 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
     <table>
         <thead>
             <tr>
-                <th>Descripción</th>
-                <th>Cantidad</th>
+                <th className="th-descripcion">Descripción</th>
+                <th className="th-cantidad">Cantidad</th>
             </tr>
         </thead>
         <tbody>{rows}</tbody>
