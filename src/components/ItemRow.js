@@ -4,10 +4,15 @@ const ItemRow = ({ item }) => {
             {item.name}
         </span>
 
+    const quantity = item.quantity > 0 ? item.quantity :
+        <span style={{ color: 'red' }}>
+            {item.quantity}
+        </span>
+
   return (
     <tr>
         <td>{name}</td>
-        <td className="td-cantidad">{item.quantity}</td>
+        <td className="td-cantidad">{quantity}</td>
     </tr>
   )
 }
