@@ -25,6 +25,10 @@ td {
   padding: 3px;
 }
 
+input {
+  font-family: 'Open Sans', sans-serif;
+}
+
 input[type=text] {
   padding: 5px;
 }
