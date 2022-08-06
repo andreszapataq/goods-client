@@ -13,7 +13,7 @@ function App() {
   })
 
   const fetchInventario = async () => {
-    const res = await fetch('http://localhost:5008/api/v1/inventario')
+    const res = await fetch('http://localhost:4001/api/v1/inventario')
 
     const data = await res.json()
 
