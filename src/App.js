@@ -18,6 +18,7 @@ function App() {
     const data = await res.json()
 
     setInventario(data.data)
+    console.log(data)
   }
 
   return (
