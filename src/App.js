@@ -10,7 +10,7 @@ function App() {
     }
 
     getInventario()
-  })
+  }, [])
 
   const fetchInventario = async () => {
     const res = await fetch('http://localhost:4001/api/v1/inventario')
@@ -18,7 +18,7 @@ function App() {
     const data = await res.json()
 
     setInventario(data.data)
-    console.log(data)
+    console.log(data.data)
   }
 
   return (
