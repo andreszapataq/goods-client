@@ -14,7 +14,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
         if(inStockOnly && !item.stocked) {
             return
         }
-        if(item.category !==lastCategory) {
+        if(item.category !== lastCategory) {
             rows.push(
                 <ItemCategoryRow
                     key={item.category}
