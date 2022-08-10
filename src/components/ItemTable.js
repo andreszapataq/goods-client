@@ -29,6 +29,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             />
         )
         lastCategory = item.category
+        console.log(lastCategory)
     })
 
   return (
