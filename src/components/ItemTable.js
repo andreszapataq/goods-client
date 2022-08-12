@@ -29,7 +29,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             />
         )
         lastCategory = item.category
-        // console.log(lastCategory)
+        console.log(lastCategory)
     })
 
   return (
