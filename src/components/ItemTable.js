@@ -15,12 +15,14 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             return
         }
         if(item.category !== lastCategory) {
-            rows.push(
-                <ItemCategoryRow
-                    key={item.category}
-                    category={item.category}
-                />
-            )
+            if(item.category.indexOf(rows) === -1) {
+                rows.push(
+                    <ItemCategoryRow
+                        key={item.category}
+                        category={item.category}
+                    />
+                )
+            }
         }
         rows.push(
             <ItemRow
@@ -29,7 +31,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             />
         )
         lastCategory = item.category
-        console.log(lastCategory)
+        console.log(rows)
     })
 
   return (
