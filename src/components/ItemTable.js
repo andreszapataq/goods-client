@@ -14,15 +14,13 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
         if(inStockOnly && !item.stocked) {
             return
         }
-        if(item.category.indexOf(rows) === -1) {
-            // if(item.category === lastCategory) {    
-                rows.push(
-                    <ItemCategoryRow
-                        key={item.category}
-                        category={item.category}
-                    />
-                )
-            // }
+        if(item.category !== lastCategory) {
+            rows.push(
+                <ItemCategoryRow
+                    key={item.category}
+                    category={item.category}
+                />
+            )
         }
         rows.push(
             <ItemRow
