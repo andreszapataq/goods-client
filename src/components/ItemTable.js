@@ -15,7 +15,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             return
         }
         if(category.indexOf(item.category) === -1) {
-            category.push(
+            rows.push(
                 // item.category
                 <ItemCategoryRow
                     key={item._id}
