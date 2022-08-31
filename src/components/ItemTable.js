@@ -22,7 +22,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
                     category={item.category}
                 />
             )
-            // console.log(item.category)
+            console.log(item.category)
         }
         rows.push(
             <ItemRow
