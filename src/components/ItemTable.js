@@ -15,13 +15,13 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             return
         }
         if(category.indexOf(item.category) === -1) {
-            rows.push(
+            category.push(
                 <ItemCategoryRow
                     key={item._id}
                     category={item.category}
                 />
             )
-            category.push(item.category)
+            // category.push(item.category)
         }
         rows.push(
             <ItemRow
@@ -41,6 +41,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
                 <th className="th-cantidad">Cantidad</th>
             </tr>
         </thead>
+        <tbody>{category}</tbody>
         <tbody>{rows}</tbody>
     </table>
   )
