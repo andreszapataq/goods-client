@@ -21,11 +21,10 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
                     category={item.category}
                 />
             )
-            // category.push(item.category)
         }
         rows.push(
             <ItemRow
-                key={item.name}
+                key={item._id}
                 item={item}
             />
         )
