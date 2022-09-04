@@ -28,8 +28,9 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
                 item={item}
             />
         )
-        console.log(rows)
+        console.log(item)
         console.log(category)
+        console.log(rows)
     })
 
   return (
