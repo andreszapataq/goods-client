@@ -16,11 +16,11 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
         }
         if(category.indexOf(item.category) === -1) {
             category.push(
-                item.category
-                // <ItemCategoryRow
-                //     key={item._id}
-                //     category={item.category}
-                // />
+                // item.category
+                <ItemCategoryRow
+                    key={item._id}
+                    category={item.category}
+                />
             )
         }
         rows.push(
@@ -31,7 +31,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
         )
         console.log(item)
         console.log(category)
-        console.log(rows)
+        // console.log(rows)
     })
 
   return (
