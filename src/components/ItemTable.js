@@ -3,7 +3,8 @@ import ItemRow from "./ItemRow"
 
 const ItemTable = ({ items, filterText, inStockOnly }) => {
     const rows = []
-    const category = []
+    const categories = []
+    const categoryRows = []
 
     items.forEach((item) => {
         if(item.name.toLowerCase().indexOf(
@@ -14,12 +15,18 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
         if(inStockOnly && !item.stocked) {
             return
         }
-        if(category.indexOf(item.category) === -1) {
-            category.push(
-                // item.category
+        if(categories.indexOf(item.category) === -1) {
+            categories.push(
+                item.category
+                // <ItemCategoryRow
+                //     key={item._id}
+                //     category={item.category}
+                // />
+            )
+            categoryRows.push(
                 <ItemCategoryRow
                     key={item._id}
-                    category={item.category}
+                    category={categories.map((i) => (i))}
                 />
             )
         }
@@ -29,9 +36,9 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
                 item={item}
             />
         )
+        console.log(rows)
+        console.log(categories)
         console.log(item)
-        console.log(category)
-        // console.log(rows)
     })
 
   return (
@@ -42,7 +49,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
                 <th className="th-cantidad">Cantidad</th>
             </tr>
         </thead>
-        <tbody>{category}</tbody>
+        <tbody>{categoryRows}</tbody>
         <tbody>{rows}</tbody>
     </table>
   )
