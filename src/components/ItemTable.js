@@ -38,7 +38,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
         )
         console.log(rows)
         console.log(categories)
-        console.log(item)
+        // console.log(item)
     })
 
   return (
