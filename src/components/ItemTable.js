@@ -26,7 +26,7 @@ const ItemTable = ({ items, filterText, inStockOnly }) => {
             categoryRows.push(
                 <ItemCategoryRow
                     key={item._id}
-                    category={categories.map((i) => console.log(i))}
+                    category={categories.map((i) => i)}
                 />
             )
         }
